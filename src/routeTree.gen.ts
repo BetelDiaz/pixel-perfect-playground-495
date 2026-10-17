@@ -10,33 +10,193 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AccesoRouteImport } from './routes/acceso'
+import { Route as CentrosRouteImport } from './routes/centros'
+import { Route as ColaborarRouteImport } from './routes/colaborar'
+import { Route as CreaRouteImport } from './routes/crea'
+import { Route as ExploraRouteImport } from './routes/explora'
+import { Route as ImpactoRouteImport } from './routes/impacto'
+import { Route as MentoresRouteImport } from './routes/mentores'
+import { Route as PrivacidadRouteImport } from './routes/privacidad'
+import { Route as ProgramaRouteImport } from './routes/programa'
+import { Route as ProteccionMenoresRouteImport } from './routes/proteccion-menores'
+import { Route as RegistroRouteImport } from './routes/registro'
+import { Route as RetosRouteImport } from './routes/retos'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AccesoRoute = AccesoRouteImport.update({
+  id: '/acceso',
+  path: '/acceso',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CentrosRoute = CentrosRouteImport.update({
+  id: '/centros',
+  path: '/centros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ColaborarRoute = ColaborarRouteImport.update({
+  id: '/colaborar',
+  path: '/colaborar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreaRoute = CreaRouteImport.update({
+  id: '/crea',
+  path: '/crea',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExploraRoute = ExploraRouteImport.update({
+  id: '/explora',
+  path: '/explora',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpactoRoute = ImpactoRouteImport.update({
+  id: '/impacto',
+  path: '/impacto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MentoresRoute = MentoresRouteImport.update({
+  id: '/mentores',
+  path: '/mentores',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacidadRoute = PrivacidadRouteImport.update({
+  id: '/privacidad',
+  path: '/privacidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramaRoute = ProgramaRouteImport.update({
+  id: '/programa',
+  path: '/programa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProteccionMenoresRoute = ProteccionMenoresRouteImport.update({
+  id: '/proteccion-menores',
+  path: '/proteccion-menores',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegistroRoute = RegistroRouteImport.update({
+  id: '/registro',
+  path: '/registro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RetosRoute = RetosRouteImport.update({
+  id: '/retos',
+  path: '/retos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/acceso': typeof AccesoRoute
+  '/centros': typeof CentrosRoute
+  '/colaborar': typeof ColaborarRoute
+  '/crea': typeof CreaRoute
+  '/explora': typeof ExploraRoute
+  '/impacto': typeof ImpactoRoute
+  '/mentores': typeof MentoresRoute
+  '/privacidad': typeof PrivacidadRoute
+  '/programa': typeof ProgramaRoute
+  '/proteccion-menores': typeof ProteccionMenoresRoute
+  '/registro': typeof RegistroRoute
+  '/retos': typeof RetosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/acceso': typeof AccesoRoute
+  '/centros': typeof CentrosRoute
+  '/colaborar': typeof ColaborarRoute
+  '/crea': typeof CreaRoute
+  '/explora': typeof ExploraRoute
+  '/impacto': typeof ImpactoRoute
+  '/mentores': typeof MentoresRoute
+  '/privacidad': typeof PrivacidadRoute
+  '/programa': typeof ProgramaRoute
+  '/proteccion-menores': typeof ProteccionMenoresRoute
+  '/registro': typeof RegistroRoute
+  '/retos': typeof RetosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/acceso': typeof AccesoRoute
+  '/centros': typeof CentrosRoute
+  '/colaborar': typeof ColaborarRoute
+  '/crea': typeof CreaRoute
+  '/explora': typeof ExploraRoute
+  '/impacto': typeof ImpactoRoute
+  '/mentores': typeof MentoresRoute
+  '/privacidad': typeof PrivacidadRoute
+  '/programa': typeof ProgramaRoute
+  '/proteccion-menores': typeof ProteccionMenoresRoute
+  '/registro': typeof RegistroRoute
+  '/retos': typeof RetosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/acceso'
+    | '/centros'
+    | '/colaborar'
+    | '/crea'
+    | '/explora'
+    | '/impacto'
+    | '/mentores'
+    | '/privacidad'
+    | '/programa'
+    | '/proteccion-menores'
+    | '/registro'
+    | '/retos'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/acceso'
+    | '/centros'
+    | '/colaborar'
+    | '/crea'
+    | '/explora'
+    | '/impacto'
+    | '/mentores'
+    | '/privacidad'
+    | '/programa'
+    | '/proteccion-menores'
+    | '/registro'
+    | '/retos'
+  id:
+    | '__root__'
+    | '/'
+    | '/acceso'
+    | '/centros'
+    | '/colaborar'
+    | '/crea'
+    | '/explora'
+    | '/impacto'
+    | '/mentores'
+    | '/privacidad'
+    | '/programa'
+    | '/proteccion-menores'
+    | '/registro'
+    | '/retos'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AccesoRoute: typeof AccesoRoute
+  CentrosRoute: typeof CentrosRoute
+  ColaborarRoute: typeof ColaborarRoute
+  CreaRoute: typeof CreaRoute
+  ExploraRoute: typeof ExploraRoute
+  ImpactoRoute: typeof ImpactoRoute
+  MentoresRoute: typeof MentoresRoute
+  PrivacidadRoute: typeof PrivacidadRoute
+  ProgramaRoute: typeof ProgramaRoute
+  ProteccionMenoresRoute: typeof ProteccionMenoresRoute
+  RegistroRoute: typeof RegistroRoute
+  RetosRoute: typeof RetosRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +208,107 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/acceso': {
+      id: '/acceso'
+      path: '/acceso'
+      fullPath: '/acceso'
+      preLoaderRoute: typeof AccesoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/centros': {
+      id: '/centros'
+      path: '/centros'
+      fullPath: '/centros'
+      preLoaderRoute: typeof CentrosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/colaborar': {
+      id: '/colaborar'
+      path: '/colaborar'
+      fullPath: '/colaborar'
+      preLoaderRoute: typeof ColaborarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/crea': {
+      id: '/crea'
+      path: '/crea'
+      fullPath: '/crea'
+      preLoaderRoute: typeof CreaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/explora': {
+      id: '/explora'
+      path: '/explora'
+      fullPath: '/explora'
+      preLoaderRoute: typeof ExploraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impacto': {
+      id: '/impacto'
+      path: '/impacto'
+      fullPath: '/impacto'
+      preLoaderRoute: typeof ImpactoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mentores': {
+      id: '/mentores'
+      path: '/mentores'
+      fullPath: '/mentores'
+      preLoaderRoute: typeof MentoresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacidad': {
+      id: '/privacidad'
+      path: '/privacidad'
+      fullPath: '/privacidad'
+      preLoaderRoute: typeof PrivacidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programa': {
+      id: '/programa'
+      path: '/programa'
+      fullPath: '/programa'
+      preLoaderRoute: typeof ProgramaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/proteccion-menores': {
+      id: '/proteccion-menores'
+      path: '/proteccion-menores'
+      fullPath: '/proteccion-menores'
+      preLoaderRoute: typeof ProteccionMenoresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/registro': {
+      id: '/registro'
+      path: '/registro'
+      fullPath: '/registro'
+      preLoaderRoute: typeof RegistroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/retos': {
+      id: '/retos'
+      path: '/retos'
+      fullPath: '/retos'
+      preLoaderRoute: typeof RetosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AccesoRoute: AccesoRoute,
+  CentrosRoute: CentrosRoute,
+  ColaborarRoute: ColaborarRoute,
+  CreaRoute: CreaRoute,
+  ExploraRoute: ExploraRoute,
+  ImpactoRoute: ImpactoRoute,
+  MentoresRoute: MentoresRoute,
+  PrivacidadRoute: PrivacidadRoute,
+  ProgramaRoute: ProgramaRoute,
+  ProteccionMenoresRoute: ProteccionMenoresRoute,
+  RegistroRoute: RegistroRoute,
+  RetosRoute: RetosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

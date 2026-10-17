@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, type LinkProps } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 
 const nav = [
@@ -59,7 +59,7 @@ export function Layout({ children }: { children: ReactNode }) {
   );
 }
 
-function FooterCol({ t, items }: { t: string; items: [string, string][] }) {
+function FooterCol({ t, items }: { t: string; items: [NonNullable<LinkProps["to"]>, string][] }) {
   return (
     <div>
       <p className="font-semibold">{t}</p>
